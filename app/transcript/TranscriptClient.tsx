@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "../../shared/ui/button";
 import { Card } from "../../shared/ui/card";
+import { Input } from "../../shared/ui/input";
 import { ArrowLeft, MessageSquare, FileText, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
