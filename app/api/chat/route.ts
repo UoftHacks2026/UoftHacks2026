@@ -100,7 +100,7 @@ export async function POST(req: Request) {
     const result = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents,
-      generationConfig: {
+      config: {
         temperature: 0.2,
         maxOutputTokens: 512,
       },
