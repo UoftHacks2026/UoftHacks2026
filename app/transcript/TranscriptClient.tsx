@@ -103,7 +103,7 @@ export default function TranscriptClient() {
     setSavingTitle(true);
     setError(null);
     try {
-      const res = await fetch(`/api/recordings/${id}`, {
+      const res = await fetch(`/api/transcripts/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title: trimmed }),
