@@ -14,7 +14,6 @@ interface Story {
   excerpt: string;
   date: string;
   language: string;
-  duration: string;
 }
 
 export default function StoryLibraryPage() {
@@ -59,7 +58,6 @@ export default function StoryLibraryPage() {
                 })
               : "Unknown date",
             language: "English",
-            duration: "—",
           } satisfies Story;
         });
 
@@ -166,10 +164,6 @@ export default function StoryLibraryPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-sm text-amber-700 border-t border-amber-200 pt-4">
-                      <div className="flex items-center gap-1.5">
-                        <Clock className="w-4 h-4 text-amber-600" />
-                        <span>{story.duration}</span>
-                      </div>
                       <div className="flex items-center gap-1.5">
                         <Globe className="w-4 h-4 text-amber-600" />
                         <span>{story.language}</span>
