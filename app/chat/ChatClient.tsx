@@ -86,7 +86,6 @@ export default function ChatClient() {
         console.error("API /api/chat failed:", response.status, errText);
         setErrorMessage(`Chat API error ${response.status}: ${errText}`);
         return;
-        throw new Error(errText || "Chat failed");
       }
 
       const data = (await response.json()) as { reply?: string; error?: string };
