@@ -1,7 +1,7 @@
 // app/api/transcribe/route.ts
 import { NextResponse } from "next/server";
 import { SpeechClient } from "@google-cloud/speech";
-import { getDb } from "@/lib/mongodb";
+import { getDb } from "../../lib/mongodb";
 
 export const runtime = "nodejs"; // important: use Node runtime (not edge)
 
