@@ -16,41 +16,6 @@ interface Story {
   duration: string;
 }
 
-const mockStories: Story[] = [
-  {
-    id: '1',
-    title: 'Grandma\'s Immigration Story',
-    excerpt: 'I remember when I was just a little girl, growing up in the old neighborhood. Your great-grandfather used to walk me to school...',
-    date: 'January 15, 2026',
-    language: 'English',
-    duration: '5:23',
-  },
-  {
-    id: '2',
-    title: 'Dad\'s First Job',
-    excerpt: 'It was the summer of 1985, and I needed money for college. I walked into that hardware store with my resume...',
-    date: 'January 12, 2026',
-    language: 'English',
-    duration: '7:45',
-  },
-  {
-    id: '3',
-    title: 'The Family Recipe Secret',
-    excerpt: 'Your great-grandmother never wrote anything down. She said cooking was about feeling, not measuring...',
-    date: 'January 10, 2026',
-    language: 'English',
-    duration: '4:12',
-  },
-  {
-    id: '4',
-    title: 'How Mom and Dad Met',
-    excerpt: 'We both reached for the same book at the library. I know it sounds like a movie, but that\'s exactly what happened...',
-    date: 'January 8, 2026',
-    language: 'English',
-    duration: '6:34',
-  },
-];
-
 export default function StoryLibraryPage() {
   const router = useRouter();
   const [stories, setStories] = useState<Story[]>([]);
@@ -68,7 +33,7 @@ export default function StoryLibraryPage() {
     }
   }, []);
 
-  const displayStories = stories.length > 0 ? stories : mockStories;
+  const displayStories = stories;
 
   const handleStoryClick = (story: Story) => {
     const params = new URLSearchParams({
