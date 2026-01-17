@@ -52,6 +52,57 @@ export default function HomePage() {
           </p>
         </motion.div>
 
+        {/* Why it matters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Card className="p-8 md:p-10 bg-white/90 backdrop-blur-sm shadow-xl border-2 border-amber-100">
+            <div className="flex items-center gap-3 mb-6">
+              <Heart className="w-8 h-8 text-rose-600" />
+              <h2 className="text-3xl font-bold text-amber-900">
+                Why Family Stories Matter
+              </h2>
+            </div>
+            <p className="text-lg text-amber-800 leading-relaxed mb-6">
+              Family Capsule helps you capture and preserve your family's precious stories, 
+              memories, and wisdom. Record grandparents sharing their experiences, parents 
+              recounting family traditions, or anyone sharing the moments that shaped your family's journey.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <motion.div 
+                
+                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-md"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mb-4">
+                  <Mic className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold text-amber-900 mb-2">Record Stories</h3>
+                <p className="text-sm text-amber-800">Capture family memories with simple voice recording</p>
+              </motion.div>
+              <motion.div 
+                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-md"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                  <MessageSquare className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold text-amber-900 mb-2">Ask Questions</h3>
+                <p className="text-sm text-amber-800">Explore and understand your family's history</p>
+              </motion.div>
+              <motion.div 
+                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-md"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center mb-4">
+                  <Library className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold text-amber-900 mb-2">Build Archive</h3>
+                <p className="text-sm text-amber-800">Create a lasting legacy for future generations</p>
+              </motion.div>
+            </div>
+          </Card>
+        </motion.div>
+
         {/* Main Actions */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -104,56 +155,7 @@ export default function HomePage() {
           </div>
         </motion.div>
 
-        {/* Why it matters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <Card className="p-8 md:p-10 bg-white/90 backdrop-blur-sm shadow-xl border-2 border-amber-100">
-            <div className="flex items-center gap-3 mb-6">
-              <Heart className="w-8 h-8 text-rose-600" />
-              <h2 className="text-3xl font-bold text-amber-900">
-                Why Family Stories Matter
-              </h2>
-            </div>
-            <p className="text-lg text-amber-800 leading-relaxed mb-6">
-              Family Capsule helps you capture and preserve your family's precious stories, 
-              memories, and wisdom. Record grandparents sharing their experiences, parents 
-              recounting family traditions, or anyone sharing the moments that shaped your family's journey.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <motion.div 
-                
-                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-md"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mb-4">
-                  <Mic className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-amber-900 mb-2">Record Stories</h3>
-                <p className="text-sm text-amber-800">Capture family memories with simple voice recording</p>
-              </motion.div>
-              <motion.div 
-                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-md"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mb-4">
-                  <MessageSquare className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-amber-900 mb-2">Ask Questions</h3>
-                <p className="text-sm text-amber-800">Explore and understand your family's history</p>
-              </motion.div>
-              <motion.div 
-                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-md"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center mb-4">
-                  <Library className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-amber-900 mb-2">Build Archive</h3>
-                <p className="text-sm text-amber-800">Create a lasting legacy for future generations</p>
-              </motion.div>
-            </div>
-          </Card>
-        </motion.div>
+        
 
         
       </div>
