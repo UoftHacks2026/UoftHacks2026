@@ -136,11 +136,25 @@ export default function RecordStoryPage() {
           return id;
         })();
 
+      const storyCount =
+        Number(window.localStorage.getItem("storyCounter") || "0") + 1;
+      const storyDate = new Date().toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      });
+      const storyTitle = `Story ${storyCount} - ${storyDate}`;
+
       const form = new FormData();
       const ext = blob.type.includes("mp4") ? "m4a" : "webm";
       form.append("audio", blob, `recording.${ext}`);
+<<<<<<< HEAD
       form.append("title", "Family Story");
       form.append("speakerName", "");
+=======
+      form.append("title", storyTitle);
+      form.append("speakerName", ""); // optional
+>>>>>>> main
 
       const uploadRes = await fetch("/api/recordings", {
         method: "POST",
@@ -152,6 +166,7 @@ export default function RecordStoryPage() {
 
       const uploadJson = await uploadRes.json();
       const recordingId = uploadJson.recordingId;
+      window.localStorage.setItem("storyCounter", String(storyCount));
 
       // Backend already transcribed. Go straight to transcript page.
       router.push(`/transcript?id=${encodeURIComponent(recordingId)}`);
